@@ -685,6 +685,12 @@ ENABLE_SIGNUP = PersistentConfig(
     ),
 )
 
+ENABLE_PASSWORD_LOGIN = PersistentConfig(
+    "ENABLE_PASSWORD_LOGIN",
+    "ui.enable_password_login",
+    os.environ.get("ENABLE_PASSWORD_LOGIN", "True").lower() == "true",
+)
+
 DEFAULT_LOCALE = PersistentConfig(
     "DEFAULT_LOCALE",
     "ui.default_locale",
